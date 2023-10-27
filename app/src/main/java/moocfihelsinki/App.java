@@ -3,12 +3,17 @@
  */
 package moocfihelsinki;
 
+import main.java.moocfihelsinki.account.Account;
+
 public class App {
     public String getGreeting() {
         return "Hello World!";
     }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        var testAccount = new Account(100.00);
+        System.out.println("Initial balance: " + testAccount.getBalance().toString());
+        testAccount.deposit(20.00);
+        System.err.println("After deposit balance:" + testAccount.getBalance().toString());
     }
 }
