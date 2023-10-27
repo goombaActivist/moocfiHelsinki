@@ -4,6 +4,9 @@
 package moocfihelsinki;
 
 import main.java.moocfihelsinki.account.Account;
+import main.java.moocfihelsinki.whistle.Whistle;
+import main.java.moocfihelsinki.whistle;
+import main.java.moocfihelsinki.whistle;
 
 public class App {
     public String getGreeting() {
@@ -23,5 +26,9 @@ public class App {
         MyAccount.deposit(10.00);
         System.out.println("Matthew account funds: " + MatthewsAccount.getBalance().toString());
         System.out.println("My Account funds: " + MyAccount.getBalance().toString());
+        // Whistle
+        var whistle = new Whistle("Kvaak");
+        whistle.sound();
+
     }
 }
