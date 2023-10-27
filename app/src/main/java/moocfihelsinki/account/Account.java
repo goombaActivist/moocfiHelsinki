@@ -15,6 +15,7 @@ public class Account{
         if(this.balance-ammount< 0.0){
             throw new ArithmeticException("Ammount to withdraw larger than current funds");
         }
+        this.balance-=ammount;
     }
 
     public void deposit(Double ammount){
