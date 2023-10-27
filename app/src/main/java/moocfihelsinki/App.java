@@ -7,6 +7,7 @@ import main.java.moocfihelsinki.account.Account;
 import main.java.moocfihelsinki.whistle.Whistle;
 import main.java.moocfihelsinki.whistle;
 import main.java.moocfihelsinki.whistle;
+import main.java.moocfihelsinki.paymentcard.PaymentCard;
 
 public class App {
     public String getGreeting() {
@@ -29,6 +30,40 @@ public class App {
         // Whistle
         var whistle = new Whistle("Kvaak");
         whistle.sound();
+        //PaymentCard
+        var card = new PaymentCard(50.00);
+        System.out.println(card);
+         card.eatAffordably();
+        System.out.println(card);
 
+        card.eatHeartily();
+        card.eatAffordably();
+        System.out.println(card);
+        PaymentCard card2 = new PaymentCard(10.00);
+        System.out.println(card2);
+        card2.addMoney(15.00);
+        System.out.println(card2);
+
+        card2.addMoney(10.00);
+        System.out.println(card2);
+
+        card2.addMoney(200.00);
+        System.out.println(card2);
+        var PaulsCard = new PaymentCard(20.00);
+        var MattsCard = new PaymentCard(30.00);
+        PaulsCard.eatHeartily();
+        MattsCard.eatAffordably();
+        System.out.println("Matt's Card: " + MattsCard);
+        System.out.println("Paul's Card: " + PaulsCard);
+        PaulsCard.addMoney(20.00);
+        MattsCard.eatHeartily();
+        System.out.println("Matt's Card: " + MattsCard);
+        System.out.println("Paul's Card: " + PaulsCard);
+        PaulsCard.eatAffordably();
+        PaulsCard.eatAffordably();
+        MattsCard.addMoney(50.00);
+        System.out.println("Matt's Card: " + MattsCard);
+        System.out.println("Paul's Card: " + PaulsCard);
+        
     }
 }
