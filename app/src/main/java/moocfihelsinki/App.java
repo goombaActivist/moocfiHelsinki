@@ -6,7 +6,8 @@ package moocfihelsinki;
 import java.util.Scanner;
 
 import moocfihelsinki.personalinformationcollection.PersonalInformationCollection;
-import moocfihelsinki.televesionprogramcollection.TelevisionProgramCollection;;
+import moocfihelsinki.televesionprogramcollection.TelevisionProgramCollection;
+import moocfihelsinki.bookcollection.BookCollection;
 
 public class App {
     public String getGreeting() {
@@ -17,7 +18,8 @@ public class App {
         //Personalnformation
         var appReader = new Scanner(System.in);
         System.out.println("Type 1 to demo personal information program");
-        System.out.println("Type 2 to demo television programs ");
+        System.out.println("Type 2 to demo television programs program ");
+        System.out.println("Type 3 to demo Books program ");
         switch (appReader.nextInt()) {
             case 1:
                 var personListInfo = new PersonalInformationCollection();
@@ -36,6 +38,14 @@ public class App {
                     System.out.println("Add new TV program? Press 2");
                 }while(appReader.nextInt()==2);
                 tvList.filterMoviesDueToDuration(appReader);
+            case 3:
+                var bookList = new BookCollection();
+                do{
+                    System.out.println("New Tv Program: ");
+                    bookList.addBook(appReader);
+                    System.out.println("Add new book ? Press 3");
+                }while(appReader.nextInt()==3);
+                bookList.printBooks(appReader);
             default:
                 break;
         }
