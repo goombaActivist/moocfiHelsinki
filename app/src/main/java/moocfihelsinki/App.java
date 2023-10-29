@@ -3,12 +3,33 @@
  */
 package moocfihelsinki;
 
+import java.io.IOException;
+import java.util.Scanner;
+
+import moocfihelsinki.numberofstrings.NumberOfStrings;
+import moocfihelsinki.cubes.Cubes;
+import moocfihelsinki.sportstatistics.SportStatistics;
+
 public class App {
     public String getGreeting() {
         return "Hello World!";
     }
 
-    public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+    public static void main(String[] args) throws IOException {
+        var appReader = new Scanner(System.in);
+        System.out.println("Type 1 for the Number of Strings assgn demo");
+        System.out.println("Type 2 for the Cubes assgn demo");
+        System.out.println("Type 3 for the GamesPlayed assgn demo");
+        switch (appReader.nextLine()) {
+            case "1":
+                NumberOfStrings.howManyStrings(appReader);
+                break;
+            case "2":
+                Cubes.cubeOfNumber(appReader);
+            case "3":
+                SportStatistics.gamesPlayed(appReader);
+            default:
+                break;
+        }
     }
 }
