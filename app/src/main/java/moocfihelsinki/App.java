@@ -3,12 +3,32 @@
  */
 package moocfihelsinki;
 
+import java.util.Scanner;
+
+import moocfihelsinki.personalinformationcollection.PersonalInformationCollection;
+
 public class App {
     public String getGreeting() {
         return "Hello World!";
     }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        //Personalnformation
+        var appReader = new Scanner(System.in);
+        System.out.println("Type 1 to demo personal information program");
+        switch (appReader.nextInt()) {
+            case 1:
+                var personListInfo = new PersonalInformationCollection();
+                do{
+                    System.err.println("New personal details: ");
+                    personListInfo.addPersonalInfo();
+                    System.out.println("Choice Personal Information, press 1 to add a new personal info ");
+                }while (appReader.nextInt()==1);
+                personListInfo.printPersonalInfo();
+                break;
+            default:
+                break;
+        }
+        System.out.println("End of demo!");
     }
 }
