@@ -1,4 +1,4 @@
-package main.java.moocfihelsinki.paymentcard;
+package moocfihelsinki.paymentcard;
 
 public class PaymentCard {
     private Double balance;

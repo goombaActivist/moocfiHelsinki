@@ -1,4 +1,4 @@
-package main.java.moocfihelsinki.whistle;
+package moocfihelsinki.whistle;
 
 public class Whistle {
     private String sound;

@@ -1,4 +1,4 @@
-package main.java.moocfihelsinki.account;
+package moocfihelsinki.account;
 
 public class Account{
     private Double balance;

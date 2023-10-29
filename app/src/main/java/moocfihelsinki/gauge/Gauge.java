@@ -1,5 +1,5 @@
 public class Gauge {
-    private int value;
+    private double value;
 
     public Gauge(){
         this.value=0.0;
@@ -16,7 +16,7 @@ public class Gauge {
         }
     }
 
-    public int value(){
+    public double value(){
         return this.value;
     }
 

@@ -1,7 +1,7 @@
-package main.java.moocfihelsinki.dog;
+package moocfihelsinki.dog;
 
 public class Dog {
     private String name;
     private String breed;
-    private Int age;
+    private int age;
 }

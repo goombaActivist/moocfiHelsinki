@@ -3,11 +3,12 @@
  */
 package moocfihelsinki;
 
-import main.java.moocfihelsinki.account.Account;
-import main.java.moocfihelsinki.whistle.Whistle;
-import main.java.moocfihelsinki.whistle;
-import main.java.moocfihelsinki.whistle;
-import main.java.moocfihelsinki.paymentcard.PaymentCard;
+import java.util.Scanner;
+
+import moocfihelsinki.account.Account;
+import moocfihelsinki.whistle.Whistle;
+import moocfihelsinki.paymentcard.PaymentCard;
+import moocfihelsinki.items.Items;
 
 public class App {
     public String getGreeting() {
@@ -64,6 +65,15 @@ public class App {
         MattsCard.addMoney(50.00);
         System.out.println("Matt's Card: " + MattsCard);
         System.out.println("Paul's Card: " + PaulsCard);
-        
+        //Object List
+        var itemsList = new Items();
+        var inputReader = new Scanner(System.in);
+        System.out.println("Type only enter to continue");
+        while(inputReader.nextLine().trim().equals("")){
+            itemsList.addItem();
+            System.out.println("Type something else to stop and print the shopping list");
+        }
+        inputReader.close();
+        itemsList.printItems();
     }
 }

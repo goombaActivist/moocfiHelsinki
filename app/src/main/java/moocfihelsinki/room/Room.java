@@ -1,6 +1,6 @@
 public class Room {
     private String code;
-    private Int numbersOfSeats;
+    private int numbersOfSeats;
 
     public Room(String classCode, int numbersOfSeats){
         this.code = classCode;

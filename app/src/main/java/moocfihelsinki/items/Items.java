@@ -1,21 +1,14 @@
-package main.java.moocfihelsinki.items;
+package moocfihelsinki.items;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Scanner;
-
-public class Item{
-    protected String name;
-    protected Date creationDate;
-
-    protected Item(String itemName, Date cdate){
-        this.name = itemName;
-        this.creationDate = cdate;
-    }
-}
+import moocfihelsinki.item.Item;
 
 public class Items {
-    private static Scanner readInput;
-    private ArrayList<Item> currItems;
+    private static Scanner readInput = new Scanner(System.in);
+    private ArrayList<Item> currItems = new ArrayList<>();
+    static final LocalDate CURDATE = LocalDate.now();
 
     public void printItems(){
         this.currItems.forEach((curItem) -> {
@@ -25,10 +18,9 @@ public class Items {
     }
 
     public void addItem(){
-        var itemName = System.out.println("Item name: ");
-        readInput.nextLine();
-        System.out.println("Date of creation ");
-        var cdate = readInput.nextLine();
-        this.currItems.add(Item(itemName,cdate));
+        System.out.println("Item name: ");
+        var itemName = readInput.nextLine();
+        var curItem = new Item(itemName, CURDATE);
+        this.currItems.add(curItem);
     }
 }
